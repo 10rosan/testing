@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testing/pages/register.dart';
+import 'package:testing/pages/real_home.dart';
 
 void main(List<String> args) => runApp(MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       title: 'Station The Food',
-      home: RegisterPage(),
+      home: RealState(),
     );
   }
 }

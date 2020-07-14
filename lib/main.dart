@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:testing/pages/real_home.dart';
+import 'package:provider/provider.dart';
+import 'package:testing/bloc/cart_bloc.dart';
+//import 'package:testing/pages/real_home.dart';
+import 'package:testing/view/home.dart';
 
-void main(List<String> args) => runApp(MyApp());
+void main() {
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => CartBlock()),
+      ],
+      child: MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -12,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       title: 'Station The Food',
-      home: RealState(),
+      home: HomeNew(),
     );
   }
 }
